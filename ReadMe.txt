@@ -16,24 +16,53 @@ https://gbatemp.net/threads/wip-super-robot-wars-ux-partial-english-translation.
   Tip: when the name screen opens, press "Default" first. This fills in
    the canonical name correctly (Agnes / Berge / Arnie), and you can
    then edit it or just press "OK".
+## Installation (Citra)
 
-Installation (Citra)
+You need:
+- A **decrypted** dump of your own Japanese Super Robot Wars UX cartridge (`.3ds` / `.cci` / `.cxi`).
+- [xdelta3](https://github.com/jmacd/xdelta-gpl/releases), or a GUI patcher such as Delta Patcher.
+- Python 3, only if you use the helper scripts.
 
-1. In Citra, right-click Super Robot Wars UX in the game list and
-   choose "Open Mods Location". This opens the folder
-   load/mods/0004000000078A00/ (create it if it doesn't exist).
-2. Inside that folder, place the files like this:
+### 1. Get the original files
 
-   0004000000078A00/
-     romfs/
-       arcTacPrmDat.bin
-       arcCmnPrmDat.bin
-       arcBtlPrmDat.bin
-       arcBtlMsgDat.bin
-     exefs/
-       code.bin
+- **RomFS files:** in Citra, right-click the game and choose **"Dump RomFS"**. From the dumped folder you need `arcTacPrmDat.bin`, `arcCmnPrmDat.bin`, `arcBtlPrmDat.bin` and `arcBtlMsgDat.bin`.
+- **code.bin:** run `python tools/extract_code.py "your_rom.3ds"`. It writes `code_original.bin` next to the ROM.
 
-3. Boot the game normally from your original, unmodified ROM.
+### 2. Apply the patches
+
+**Easy way:** put `xdelta3.exe` inside the `tools` folder and run:
+
+```
+python tools/apply_patches.py <dumped_romfs_folder> <code_original.bin>
+```
+
+It checks that your files are the right ones, applies every patch, and creates a ready-to-use `0004000000078A00` folder inside `tools`.
+
+**Manual way:** apply each patch from `patches/` to the matching original file with xdelta3 or Delta Patcher:
+
+| Original file | Patch |
+|---|---|
+| `arcTacPrmDat.bin` | `arcTacPrmDat.xdelta` |
+| `arcCmnPrmDat.bin` | `arcCmnPrmDat.xdelta` |
+| `arcBtlPrmDat.bin` | `arcBtlPrmDat.xdelta` |
+| `arcBtlMsgDat.bin` | `arcBtlMsgDat.xdelta` |
+| `code_original.bin` | `code.xdelta` (name the result `code.bin`) |
+
+### 3. Put the files in Citra's mods folder
+
+Right-click the game in Citra, choose **"Open Mods Location"**, and place the patched files like this:
+
+```
+0004000000078A00/
+  code.bin
+  romfs/
+    arcTacPrmDat.bin
+    arcCmnPrmDat.bin
+    arcBtlPrmDat.bin
+    arcBtlMsgDat.bin
+```
+
+Then boot the game from your original, unmodified ROM.
 
 Notes:
 - arcCmnPrmDat.bin is about 67 MB. That's normal, the original
@@ -46,6 +75,7 @@ Notes:
   copying the same files into a folder named 0004000000078A00, as
   Utopiaray's original instructions describe, but this hasn't been
   confirmed.
+
 
 
 Q&A
