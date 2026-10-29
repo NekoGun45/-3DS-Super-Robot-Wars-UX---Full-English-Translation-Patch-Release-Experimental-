@@ -1,5 +1,7 @@
 Pre-Patched download: https://www.mediafire.com/file/4g1d1cndwpreskg/SRW_UX_EN_v1.0.3.zip/
 
+Note on the squad name screen: When the squad naming screen appears, please press “Default” (this sets it to “Ultimate Cross” / “UX”) or type a name of your choice before pressing “OK”. In some cases the screen may first show the original Japanese name, and I haven’t tested what effects keeping that name could have.v
+
 Acknowledgements
 
 Special thanks to Utopiaray, the first person to work on an interface
