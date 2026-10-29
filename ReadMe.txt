@@ -1,5 +1,4 @@
-Pre-Patched download: https://www.mediafire.com/file/s1urz4t4au7ekj5/SRW_UX_ENG_1.0.1_PATCH.zip/ 
-
+Pre-Patched download: https://www.mediafire.com/file/79w5eaquv4ofrmj/SRW_UX_ENG_1.0.2.zip/
 Acknowledgements
 
 Special thanks to Utopiaray, the first person to work on an interface
