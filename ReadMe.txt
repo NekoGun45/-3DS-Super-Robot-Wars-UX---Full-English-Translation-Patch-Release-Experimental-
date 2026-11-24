@@ -1,5 +1,5 @@
 Pre-Patched download: https://www.mediafire.com/file/yo8eho007eu9m0b/SRW_UX_EN_V1.0.5.zip/
-Note on the squad name screen: When the squad naming screen appears, please press “Default” (this sets it to “Ultimate Cross” / “UX”) or type a name of your choice before pressing “OK”. In some cases the screen may first show the original Japanese name, and I haven’t tested what effects keeping that name could have.v
+Note on the squad name screen: When the squad naming screen appears, please press “Default” (this sets it to “Ultimate Cross” / “UX”) or type a name of your choice before pressing “OK”. In some cases the screen may first show the original Japanese name, and I haven’t tested what effects keeping that name could have.
 
 Acknowledgements
 
@@ -71,21 +71,9 @@ Notes:
 - Always use the included code.bin. The battle dialogue file needs
   it, and the game will crash with the original code.bin.
 
-* Luma3DS (real hardware): only tested on Citra so far. It may also
-  work through Luma's built-in LayeredFS (Luma 7.0 or later) by
-  copying the same files into a folder named 0004000000078A00, as
-  Utopiaray's original instructions describe, but this hasn't been
-  confirmed.
-
-
+* Luma3DS (real hardware): Tested on real hardware
 
 Q&A
-
-Q: Why are some lines awkward or abridged?
-A: The game has strict text limits: each dialogue box and battle
-   message only fits a set number of characters per line. Some lines
-   had to be shortened or reworded to fit, while keeping their meaning
-   and the character's voice.
 
 Q: Why do the Festum speak in broken English?
 A: That's how they speak in their home series, Fafner. Their odd,
@@ -118,32 +106,10 @@ A: In the story, the game uses whatever name you enter. Battle
    nickname (his default name is Agnes Berge). This is the same in
    the original Japanese version.
 
-Q: The name entry screen is clunky. How do I enter a name?
-A: It works, but it's awkward. To make room for the English interface
-   text, the Japanese kana and kanji were removed from the keyboard, and
-   the Latin letters were switched to a standard font so thin letters
-   like "i", "l" and "1" display properly. As a side effect, the cursor
-   doesn't line up perfectly with the letters, and the labels overlap
-   the text fields.
-   Switch to "Alphanumeric" with Y, pick letters one by one, use B for
-   a space and L/R to move the cursor. It takes some trial and error
-   (it took me about 4 minutes to name my character), but it works,
-   and the name is saved and used in the story. If you'd rather skip
-   it, "Default" keeps Agnes Berge / Arnie.
-
-Q: Does this work on real hardware?
-A: It has only been tested on Citra. It may work on a 3DS through
-   Luma3DS's built-in LayeredFS (Luma 7.0 or later), but this hasn't
-   been confirmed. If you try it, let me know!
-
 Q: The game crashes when a battle starts. What's wrong?
 A: You're most likely missing the patch's code.bin, or using the
    original one. The translated battle dialogue needs the included
    code.bin, so make sure it's in place.
-
-Q: Can I use this together with Utopiaray's patch?
-A: No. This patch already replaces the same files, so just use this
-   one on its own.
 
 Q: Why are some screens still showing Japanese graphics? Why weren't
    they translated?
